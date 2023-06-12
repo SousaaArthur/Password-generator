@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+*{
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1C1C1C;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-input{
+    max-width: 480px;
+    margin: 14px 0;
+}
+
+.container-input span{
+    color: 	#FFFAFA;
+}
+
+.logo{
+    margin-bottom: 50px;
+}
+
+.slider{
+    appearance: none;
+    width: 100%;
+    border-radius: 10px;
+    background: #363636;
+    height: 18px;
+    outline: none;
+    margin-top: 8px;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #00FA9A;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 1px #03ff9e;
+    border-radius: 15px;
+}
+
+
+.checkbox{
+    top: 10px;
+}
+
+input[type="checkbox"]{
+    position: relative;
+    width: 50px;
+    height: 30px;
+    outline: none;
+    appearance: none;
+    background: #363636;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px #2424245d inset;
+}
+
+input:checked[type="checkbox"]{
+    background-color: #03ff9e;
+}
+
+input[type="checkbox"]::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3f3f3f;
+    border-radius: 50%;
+    transform: scale(1.2);
+    transition: .5s;
+    cursor: pointer;
+}
+
+input:checked[type="checkbox"]::before{
+    left: 30px;
+    background-color: #02db88
+}
+
+.textCheckbox{
+    position: relative;
+    left: 12px;
+    top: 2px;
+    font-size: 18px;
+    color: #FFFAFA;
+}
+
+
+.button-cta{
+    height: 40px;
+    background-color: #00FA9A;
+    color: #363636;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    margin-top: 35px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button-cta:hover{
+    background-color: #16ac72;
+    color: rgb(20, 20, 20);
+}
+
+.container-password{
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.title{
+    text-align: center;
+    color: #FFFAFA;
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.password{
+    height: 60px;
+    background-color: #363636;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFAFA;
+    transition: 0.4s;
+}
+
+.password:hover{
+    transform: scale(1.05);
+    border: 1px solid #03ff9e;
+}
+
+.tooltip{
+    color: #FFFAFA;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background-color: #363636;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.container-password:hover .tooltip{
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
+
+.hide{
+    display: none;
+}
+
+.triangulo {
+    width: 0;
+    height: 0;
+    position: relative;
+    top: 20px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #363636;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.container-password:hover .triangulo{
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
